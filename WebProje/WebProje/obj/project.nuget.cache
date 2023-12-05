@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OQs3ZafDy3U8b2283XUOMjo+/bgOzi49+TYOd3BhbW3+bSvxNcCPZmeQqDLpJejwTuH+GOWyfl1mrBM8noNYEw==",
+  "dgSpecHash": "ws68GKe814z4bUZ53FPWReIUl2vBkjIH/8qMLDQ6Q0Hd87yfiSMs/YEiCDobQ3k7/k4D+dzdtPuj3tchs+lFkw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\muammer karakaş\\source\\repos\\WebProje\\WebProje\\WebProje.csproj",
+  "projectFilePath": "C:\\Users\\muammer karakaş\\OneDrive\\Belgeler\\GitHub\\WebProgrammingProject\\WebProje\\WebProje\\WebProje.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\muammer karakaş\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\muammer karakaş\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

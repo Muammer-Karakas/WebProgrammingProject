@@ -2018,11 +2018,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\muammer karakaş\\source\\repos\\WebProje\\WebProje\\WebProje.csproj",
+      "projectUniqueName": "C:\\Users\\muammer karakaş\\OneDrive\\Belgeler\\GitHub\\WebProgrammingProject\\WebProje\\WebProje\\WebProje.csproj",
       "projectName": "WebProje",
-      "projectPath": "C:\\Users\\muammer karakaş\\source\\repos\\WebProje\\WebProje\\WebProje.csproj",
+      "projectPath": "C:\\Users\\muammer karakaş\\OneDrive\\Belgeler\\GitHub\\WebProgrammingProject\\WebProje\\WebProje\\WebProje.csproj",
       "packagesPath": "C:\\Users\\muammer karakaş\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\muammer karakaş\\source\\repos\\WebProje\\WebProje\\obj\\",
+      "outputPath": "C:\\Users\\muammer karakaş\\OneDrive\\Belgeler\\GitHub\\WebProgrammingProject\\WebProje\\WebProje\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\muammer karakaş\\AppData\\Roaming\\NuGet\\NuGet.Config",

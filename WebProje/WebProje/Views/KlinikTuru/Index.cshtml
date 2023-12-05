@@ -1,0 +1,32 @@
+﻿@model List<KlinikTuru>
+
+<h1>Klinikler </h1>
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>
+            Id
+        </th>
+        <th>
+            Klinik türü
+        </th>
+    </tr>
+
+    </thead>
+
+    <tbody>
+        @foreach(var KlinikTuru in Model)
+        {
+            <tr>
+                <td>@KlinikTuru.KlinikTuruId</td>
+                <td>@KlinikTuru.Ad</td>
+            </tr>
+        }
+
+      
+
+
+    </tbody>
+
+
+</table>
