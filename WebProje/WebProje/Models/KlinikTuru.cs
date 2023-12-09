@@ -1,13 +1,15 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace WebProje.Models
 {
     public class KlinikTuru
     {
-        [Key]
+        [Key]       //primary key
         public int KlinikTuruId { get; set; }
 
-        [Required]
+        [Required] 
+        [DisplayName("Klinik Adı")]
         public string Ad {  get; set; }
     }
 }

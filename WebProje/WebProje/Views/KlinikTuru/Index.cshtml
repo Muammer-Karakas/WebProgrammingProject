@@ -1,32 +1,50 @@
 ﻿@model List<KlinikTuru>
 
-<h1>Klinikler </h1>
-<table class="table table-bordered">
-    <thead>
-    <tr>
-        <th>
-            Id
-        </th>
-        <th>
-            Klinik türü
-        </th>
-    </tr>
+    <div class="container">
 
-    </thead>
+        <div class="row pt-3 pb-4">
+            <div>
+            <h1>Klinikler </h1>
+            </div>
+        </div>
 
-    <tbody>
-        @foreach(var KlinikTuru in Model)
-        {
+        <table class="table table-bordered">
+            <thead>
             <tr>
-                <td>@KlinikTuru.KlinikTuruId</td>
-                <td>@KlinikTuru.Ad</td>
+                <th>
+                    Id
+                </th>
+                <th>
+                    Klinik türü
+                </th>
             </tr>
-        }
+
+            </thead>
+
+            <tbody>
+                @foreach(var KlinikTuru in Model)
+                {
+                    <tr>
+                        <td>@KlinikTuru.KlinikTuruId</td>
+                        <td>@KlinikTuru.Ad</td>
+                    </tr>
+                }
 
       
 
 
-    </tbody>
+            </tbody>
 
 
-</table>
+        </table>
+
+        <div class="row pt-3 pb-2">
+            <div>
+            <a asp-controller="KlinikTuru" asp-action="KlinikEkle" class="btn btn-success" type="button">
+                Yeni Klinik Oluştur
+            </a>
+            </div>
+
+        </div>
+
+</div>
