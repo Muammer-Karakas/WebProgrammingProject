@@ -8,7 +8,8 @@ namespace WebProje.Models
         [Key]       //primary key
         public int KlinikTuruId { get; set; }
 
-        [Required] 
+        [Required(ErrorMessage ="Bu alan boş bırakılamaz!")]
+        [MaxLength(25)]
         [DisplayName("Klinik Adı")]
         public string Ad {  get; set; }
     }
