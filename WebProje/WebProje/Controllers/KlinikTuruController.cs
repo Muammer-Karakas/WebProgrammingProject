@@ -6,16 +6,16 @@ namespace WebProje.Controllers
 {
     public class KlinikTuruController : Controller
     {
-        private readonly HastaneRandevuDbContext _hastaneRandevuDbContext;
+        private readonly IKlinikTuruRepository _klinikTuruRepository;
 
-        public KlinikTuruController(HastaneRandevuDbContext context)
+        public KlinikTuruController(IKlinikTuruRepository context)
         {
-            _hastaneRandevuDbContext = context;
+            _klinikTuruRepository = context;
         }
 
         public IActionResult Index()
         {
-            List<KlinikTuru>NsnKlinikTuruList= _hastaneRandevuDbContext.KlinikTurleri.ToList();
+            List<KlinikTuru>NsnKlinikTuruList= _klinikTuruRepository.GetAll().ToList();
             return View(NsnKlinikTuruList);
         }
 
@@ -29,8 +29,9 @@ namespace WebProje.Controllers
 
             if(ModelState.IsValid) 
             {
-            _hastaneRandevuDbContext.KlinikTurleri.Add(klinikTuru);
-            _hastaneRandevuDbContext.SaveChanges();      //bilgileri veritabanına ekler
+                _klinikTuruRepository.Ekle(klinikTuru);
+                _klinikTuruRepository.Kaydet();         //bilgileri veritabanına ekler
+                TempData["Basarili"] = "Yeni Klinik Oluşturma İşlemi Başarılı.";
             return RedirectToAction("Index");
 
             }
@@ -43,7 +44,7 @@ namespace WebProje.Controllers
             {
                 return NotFound();
             }
-            KlinikTuru? klinikTuruDb = _hastaneRandevuDbContext.KlinikTurleri.Find(id);
+            KlinikTuru? klinikTuruDb = _klinikTuruRepository.Get(u => u.KlinikTuruId == id);
             if(klinikTuruDb == null)
             {
                 return NotFound();
@@ -57,8 +58,9 @@ namespace WebProje.Controllers
 
             if (ModelState.IsValid)
             {
-                _hastaneRandevuDbContext.KlinikTurleri.Update(klinikTuru);
-                _hastaneRandevuDbContext.SaveChanges();      //bilgileri veritabanına ekler
+                _klinikTuruRepository.Guncelle(klinikTuru);
+                _klinikTuruRepository.Kaydet();      //bilgileri veritabanına ekler
+                TempData["Basarili"] = "Klinik Güncelleme İşlemi Başarılı.";
                 return RedirectToAction("Index");
 
             }
@@ -71,7 +73,7 @@ namespace WebProje.Controllers
                 {
                     return NotFound();
                 }
-                KlinikTuru? klinikTuruDb = _hastaneRandevuDbContext.KlinikTurleri.Find(id);
+                KlinikTuru? klinikTuruDb =_klinikTuruRepository.Get(u => u.KlinikTuruId == id);
                 if (klinikTuruDb == null)
                 {
                     return NotFound();
@@ -82,13 +84,14 @@ namespace WebProje.Controllers
         [HttpPost, ActionName("KlinikSil")]
         public IActionResult KlinikSill(int? id)
         {
-            KlinikTuru? klinikTuru = _hastaneRandevuDbContext.KlinikTurleri.Find(id);
+            KlinikTuru? klinikTuru = _klinikTuruRepository.Get(u => u.KlinikTuruId == id);
             if(klinikTuru == null)
             {
                 return NotFound();
             }
-            _hastaneRandevuDbContext.KlinikTurleri.Remove(klinikTuru);
-            _hastaneRandevuDbContext.SaveChanges();
+            _klinikTuruRepository.Sil(klinikTuru);
+            _klinikTuruRepository.Kaydet();
+            TempData["Basarili"] = " Klinik Silme İşlemi Başarılı.";
             return RedirectToAction("Index");
 
         }
