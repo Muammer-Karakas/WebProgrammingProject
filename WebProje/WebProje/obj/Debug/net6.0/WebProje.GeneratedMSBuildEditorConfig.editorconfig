@@ -16,6 +16,22 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\muammer karakaş\OneDrive\Belgeler\GitHub\WebProgrammingProject\WebProje\WebProje
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/muammer karakaş/OneDrive/Belgeler/GitHub/WebProgrammingProject/WebProje/WebProje/Views/DoktorlarTablosu/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9rdG9ybGFyVGFibG9zdVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/muammer karakaş/OneDrive/Belgeler/GitHub/WebProgrammingProject/WebProje/WebProje/Views/DoktorlarTablosu/KlinikEkle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9rdG9ybGFyVGFibG9zdVxLbGluaWtFa2xlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/muammer karakaş/OneDrive/Belgeler/GitHub/WebProgrammingProject/WebProje/WebProje/Views/DoktorlarTablosu/KlinikGuncelle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9rdG9ybGFyVGFibG9zdVxLbGluaWtHdW5jZWxsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/muammer karakaş/OneDrive/Belgeler/GitHub/WebProgrammingProject/WebProje/WebProje/Views/DoktorlarTablosu/KlinikSil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9rdG9ybGFyVGFibG9zdVxLbGluaWtTaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/muammer karakaş/OneDrive/Belgeler/GitHub/WebProgrammingProject/WebProje/WebProje/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

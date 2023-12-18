@@ -1,0 +1,56 @@
+﻿@model DoktorlarTablosu
+
+<form method="post">
+
+    <input asp-for="DoktorId" hidden />
+    <div class="border p-3 mt-5">
+        <div class="row pb-3">
+            <h2 class="text-success">Doktor Güncelle</h2>
+
+        </div>
+
+
+        <div class="mb-3">
+            <label asp-for="DoktorAdi" class="p-0"></label>
+            <input asp-for="DoktorAdi" class="form-control" />
+            <span asp-validation-for="DoktorAdi" class="text-danger"></span>
+
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Uzmanlik" class="p-0"></label>
+            <input asp-for="Uzmanlik" class="form-control" />
+            <span asp-validation-for="Uzmanlik" class="text-danger"></span>
+
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="GunHafta" class="p-0"></label>
+            <input asp-for="GunHafta" class="form-control" />
+            <span asp-validation-for="GunHafta" class="text-danger"></span>
+
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="BaslamaSaati" class="p-0"></label>
+            <input asp-for="BaslamaSaati" class="form-control" />
+            <span asp-validation-for="BaslamaSaati" class="text-danger"></span>
+
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="BitisSaati" class="p-0"></label>
+            <input asp-for="BitisSaati" class="form-control" />
+            <span asp-validation-for="BitisSaati" class="text-danger"></span>
+
+        </div>
+
+        <button type="submit" class="btn btn-success" style="width: 200px">Doktor Güncelle</button>
+
+        <a asp-controller="DoktorlarTablosu" asp-action="Index" class="btn btn-success" style="width: 200px">
+            Doktorlar Tablosuna Dön
+        </a>
+
+    </div>
+
+</form>

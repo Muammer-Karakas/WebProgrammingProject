@@ -10,7 +10,11 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<HastaneRandevuDbContext>(options=>
           options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddScoped<IKlinikTuruRepository, KlinikTuruRepository>(); 
+//klinikTuruRepository nesnesi =>Dependency Injection
+builder.Services.AddScoped<IKlinikTuruRepository, KlinikTuruRepository>();
+
+//DoktorlarTablosuRepository nesnesi =>Dependency Injection
+builder.Services.AddScoped<IDoktorlarTablosuRepository, DoktorlarTablosuRepository>();
 
 var app = builder.Build();
 

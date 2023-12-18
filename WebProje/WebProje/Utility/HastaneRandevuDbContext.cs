@@ -8,6 +8,9 @@ namespace WebProje.Utility
         public HastaneRandevuDbContext(DbContextOptions<HastaneRandevuDbContext> options) : base(options) { }
 
         public DbSet<KlinikTuru> KlinikTurleri { get; set; }
-        
+
+        public DbSet<DoktorlarTablosu> DoktorlarTablosu { get; set; }
+
     }
+
 }
