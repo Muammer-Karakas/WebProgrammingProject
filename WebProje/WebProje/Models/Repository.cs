@@ -13,6 +13,7 @@ namespace WebProje.Models
         {
             _hastaneRandevuDbContext = hastaneRandevuDbContext;
             this.dbSet = _hastaneRandevuDbContext.Set<K>();
+            _hastaneRandevuDbContext.DoktorlarTablosu.Include(k => k.KlinikTuru).Include(k => k.KlinikId);
         }
 
 
@@ -21,16 +22,34 @@ namespace WebProje.Models
             dbSet.Add(entity);
         }
 
-        public K Get(Expression<Func<K, bool>> filtre)
+        public K Get(Expression<Func<K, bool>> filtre, string? includeProps = null)
         {
             IQueryable<K> getir = dbSet;
             getir = getir.Where(filtre);
+
+            if (!string.IsNullOrEmpty(includeProps))
+            {
+                foreach (var includeProp in includeProps.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    getir = getir.Include(includeProp);
+                }
+            }
+
             return getir.FirstOrDefault();
         }
 
-        public IEnumerable<K> GetAll()
+        public IEnumerable<K> GetAll(string? includeProps = null)
         {
             IQueryable<K> getir = dbSet;
+            if (!string.IsNullOrEmpty(includeProps))
+            {
+                foreach(var includeProp in includeProps.Split(new char[] {','} , StringSplitOptions.RemoveEmptyEntries))
+                {
+                    getir=getir.Include(includeProp);
+                }
+            }
+
+
             return getir.ToList();
         }
 

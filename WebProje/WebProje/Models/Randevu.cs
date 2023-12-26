@@ -4,23 +4,20 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebProje.Models
 {
-    public class DoktorlarTablosu
+    public class Randevu
     {
         [Key]
-        public int DoktorId { get; set; }
+        public int RandevuId { get; set; }
 
         [Required]
-        public string DoktorAdi { get; set; }
-
-        [Required]
-        public string Uzmanlik { get; set; }
+        public int HastaId { get; set; }
 
         [ValidateNever]
-        public int KlinikId {  get; set; }
-        [ForeignKey("KlinikId")]
+        public int DoktorRandevuId { get; set; }
+        [ForeignKey("DoktorRandevuId")]
 
         [ValidateNever]
-        public KlinikTuru KlinikTuru { get; set; }
+        public DoktorlarTablosu DoktorlarTablosu { get; set; }
 
         [Required]
         public string GunHafta { get; set; }
@@ -31,7 +28,6 @@ namespace WebProje.Models
         [Required]
         public TimeSpan BitisSaati { get; set; }
 
-        
 
     }
 }

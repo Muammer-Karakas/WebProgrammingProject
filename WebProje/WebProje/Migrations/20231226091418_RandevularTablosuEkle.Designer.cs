@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebProje.Utility;
 
@@ -11,9 +12,10 @@ using WebProje.Utility;
 namespace WebProje.Migrations
 {
     [DbContext(typeof(HastaneRandevuDbContext))]
-    partial class HastaneRandevuDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231226091418_RandevularTablosuEkle")]
+    partial class RandevularTablosuEkle
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -84,18 +86,8 @@ namespace WebProje.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RandevuId"), 1L, 1);
 
-                    b.Property<TimeSpan>("BaslamaSaati")
-                        .HasColumnType("time");
-
-                    b.Property<TimeSpan>("BitisSaati")
-                        .HasColumnType("time");
-
                     b.Property<int>("DoktorRandevuId")
                         .HasColumnType("int");
-
-                    b.Property<string>("GunHafta")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("HastaId")
                         .HasColumnType("int");

@@ -15,6 +15,10 @@ builder.Services.AddScoped<IKlinikTuruRepository, KlinikTuruRepository>();
 
 //DoktorlarTablosuRepository nesnesi =>Dependency Injection
 builder.Services.AddScoped<IDoktorlarTablosuRepository, DoktorlarTablosuRepository>();
+//RandevuRepository nesnesi =>Dependency Injection
+builder.Services.AddScoped<IRandevuRepository, RandevuRepository>();
+
+
 
 var app = builder.Build();
 

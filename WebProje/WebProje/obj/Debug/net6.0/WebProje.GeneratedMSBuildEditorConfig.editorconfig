@@ -20,12 +20,8 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9rdG9ybGFyVGFibG9zdVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/muammer karakaş/OneDrive/Belgeler/GitHub/WebProgrammingProject/WebProje/WebProje/Views/DoktorlarTablosu/KlinikEkle.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9rdG9ybGFyVGFibG9zdVxLbGluaWtFa2xlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/muammer karakaş/OneDrive/Belgeler/GitHub/WebProgrammingProject/WebProje/WebProje/Views/DoktorlarTablosu/KlinikGuncelle.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9rdG9ybGFyVGFibG9zdVxLbGluaWtHdW5jZWxsZS5jc2h0bWw=
+[C:/Users/muammer karakaş/OneDrive/Belgeler/GitHub/WebProgrammingProject/WebProje/WebProje/Views/DoktorlarTablosu/KlinikEkleGuncelle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9rdG9ybGFyVGFibG9zdVxLbGluaWtFa2xlR3VuY2VsbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/muammer karakaş/OneDrive/Belgeler/GitHub/WebProgrammingProject/WebProje/WebProje/Views/DoktorlarTablosu/KlinikSil.cshtml]
@@ -54,6 +50,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/muammer karakaş/OneDrive/Belgeler/GitHub/WebProgrammingProject/WebProje/WebProje/Views/KlinikTuru/KlinikSil.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2xpbmlrVHVydVxLbGluaWtTaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/muammer karakaş/OneDrive/Belgeler/GitHub/WebProgrammingProject/WebProje/WebProje/Views/Randevu/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFuZGV2dVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/muammer karakaş/OneDrive/Belgeler/GitHub/WebProgrammingProject/WebProje/WebProje/Views/Randevu/KlinikEkleGuncelle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFuZGV2dVxLbGluaWtFa2xlR3VuY2VsbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/muammer karakaş/OneDrive/Belgeler/GitHub/WebProgrammingProject/WebProje/WebProje/Views/Randevu/KlinikSil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFuZGV2dVxLbGluaWtTaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/muammer karakaş/OneDrive/Belgeler/GitHub/WebProgrammingProject/WebProje/WebProje/Views/Shared/Error.cshtml]

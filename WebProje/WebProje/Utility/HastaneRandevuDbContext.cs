@@ -11,6 +11,8 @@ namespace WebProje.Utility
 
         public DbSet<DoktorlarTablosu> DoktorlarTablosu { get; set; }
 
+        public DbSet<Randevu> Randevular { get; set; }
+
     }
 
 }

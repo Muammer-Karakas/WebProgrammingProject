@@ -12,8 +12,8 @@ using WebProje.Utility;
 namespace WebProje.Migrations
 {
     [DbContext(typeof(HastaneRandevuDbContext))]
-    [Migration("20231218154107_DoktorTablosuEkle")]
-    partial class DoktorTablosuEkle
+    [Migration("20231225174309_vtreinstallislemi")]
+    partial class vtreinstallislemi
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -46,11 +46,16 @@ namespace WebProje.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("KlinikId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Uzmanlik")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("DoktorId");
+
+                    b.HasIndex("KlinikId");
 
                     b.ToTable("DoktorlarTablosu");
                 });
@@ -71,6 +76,17 @@ namespace WebProje.Migrations
                     b.HasKey("KlinikTuruId");
 
                     b.ToTable("KlinikTurleri");
+                });
+
+            modelBuilder.Entity("WebProje.Models.DoktorlarTablosu", b =>
+                {
+                    b.HasOne("WebProje.Models.KlinikTuru", "KlinikTuru")
+                        .WithMany()
+                        .HasForeignKey("KlinikId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("KlinikTuru");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,24 +1,25 @@
-﻿@model DoktorlarTablosu
+﻿@model Randevu
 
 <form method="post">
 
-    <input asp-for="DoktorId" hidden />
+    <input asp-for="RandevuId" hidden />
     <div class="border p-3 mt-5">
         <div class="row pb-3">
-            <h2 class="text-success">Doktor Sil</h2>
+            <h2 class="text-success">Randevu Kayıt Sil</h2>
 
         </div>
 
 
         <div class="mb-3">
-            <label asp-for="DoktorAdi" class="p-0"></label>
-            <input asp-for="DoktorAdi" disabled class="form-control" />
+            <label asp-for="HastaId" class="p-0"></label>
+            <input asp-for="HastaId" disabled class="form-control" />
 
         </div>
 
         <div class="mb-3">
-            <label asp-for="Uzmanlik" class="p-0"></label>
-            <input asp-for="Uzmanlik" disabled class="form-control" />
+            <label asp-for="DoktorRandevuId" class="p-0"></label>
+            <select asp-for="DoktorRandevuId" asp-items="ViewBag.DoktorlarTablosuList" disabled class="form-select">
+            </select>
 
         </div>
 
@@ -40,10 +41,10 @@
 
         </div>
 
-        <button type="submit" class="btn btn-success" style="width: 200px">Doktor Sil</button>
+        <button type="submit" class="btn btn-success" style="width: 200px">Randevu Kayıt Sil</button>
 
-        <a asp-controller="DoktorlarTablosu" asp-action="Index" class="btn btn-success" style="width: 200px">
-            Doktorlara Dön
+        <a asp-controller="Randevu" asp-action="Index" class="btn btn-success" style="width: 200px">
+            Randevulara Dön
         </a>
 
     </div>

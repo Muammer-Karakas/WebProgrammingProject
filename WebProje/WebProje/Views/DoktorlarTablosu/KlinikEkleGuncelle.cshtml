@@ -4,7 +4,7 @@
 
     <div class="border p-3 mt-5">
         <div class="row pb-3">
-            <h2 class="text-success">Doktor Ekle</h2>
+            <h2 class="text-success">@(Model==null?"Doktor Ekle":"Doktor Güncelle")</h2>
             
         </div>
 
@@ -21,6 +21,14 @@
             <span asp-validation-for="Uzmanlik" class="text-danger"></span>
 
         </div>
+
+        <div class="mb-3">
+            <label asp-for="KlinikId" class="p-0"></label>
+            <select asp-for="KlinikId" asp-items="ViewBag.KlinikTuruList" class="form-select">
+            </select>           
+
+        </div>
+
 
         <div class="mb-3">
             <label asp-for="GunHafta" class="p-0"></label>
@@ -43,11 +51,16 @@
 
         </div>
 
-
-        <button type="submit" class="btn btn-success" style="width: 200px">Doktor Ekle</button>
-
+        @if (Model != null)
+        {
+            <button type="submit" class="btn btn-success" style="width: 200px">Güncelle</button>
+        }
+        else
+        {
+            <button type="submit" class="btn btn-success" style="width: 200px">Doktor Ekle</button>
+        }
         <a asp-controller="DoktorlarTablosu" asp-action="Index" class="btn btn-success" style="width: 200px">
-            Doktorlar Tablosuna Dön
+            Doktorlara Dön
         </a>
 
     </div>

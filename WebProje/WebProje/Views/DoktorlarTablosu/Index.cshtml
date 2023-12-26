@@ -27,6 +27,9 @@
                     Uzmanlik
                 </th>
                 <th>
+                    KlinikTuru
+                </th>
+                <th>
                     GunHafta
                 </th>
                 <th>
@@ -35,6 +38,7 @@
                 <th>
                     BitisSaati
                 </th>
+
 
                 <th>
                 </th>
@@ -51,16 +55,17 @@
                     <td>@DoktorlarTablosu.DoktorId</td>
                     <td>@DoktorlarTablosu.DoktorAdi</td>
                     <td>@DoktorlarTablosu.Uzmanlik</td>
+                    <td>@DoktorlarTablosu.KlinikTuru.Ad</td>
                     <td>@DoktorlarTablosu.GunHafta</td>
                     <td>@DoktorlarTablosu.BaslamaSaati</td>
                     <td>@DoktorlarTablosu.BitisSaati</td>
 
                         <td>
-                        <a asp-controller="DoktorlarTablosu" asp-action="KlinikGuncelle" asp-route-id="@DoktorlarTablosu.DoktorId" type="button" class="btn btn-info" style="width:200px">Güncelle</a>
+                        <a asp-controller="DoktorlarTablosu" asp-action="KlinikEkleGuncelle" asp-route-id="@DoktorlarTablosu.DoktorId" type="button" class="btn btn-info" style="width:200px">Güncelle</a>
                         </td>
 
                         <td>
-                        <a asp-controller="DoktorlarTablosu" asp-action="KlinikSil" asp-route-id="@DoktorlarTablosu.DoktorAdi" type="button" class="btn btn-danger" style="width:200px">Sil</a>
+                        <a asp-controller="DoktorlarTablosu" asp-action="KlinikSil" asp-route-id="@DoktorlarTablosu.DoktorId" type="button" class="btn btn-danger" style="width:200px">Sil</a>
                         </td>
 
                     </tr>
@@ -76,7 +81,7 @@
 
         <div class="row pt-3 pb-2">
             <div>
-            <a asp-controller="DoktorlarTablosu" asp-action="KlinikEkle" class="btn btn-success" type="button">
+            <a asp-controller="DoktorlarTablosu" asp-action="KlinikEkleGuncelle" class="btn btn-success" type="button">
                 Yeni Doktor Oluştur
             </a>
             </div>

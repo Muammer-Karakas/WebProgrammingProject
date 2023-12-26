@@ -1,26 +1,24 @@
-﻿@model DoktorlarTablosu
+﻿@model Randevu
 
 <form method="post">
 
-    <input asp-for="DoktorId" hidden />
     <div class="border p-3 mt-5">
         <div class="row pb-3">
-            <h2 class="text-success">Doktor Güncelle</h2>
-
-        </div>
-
-
-        <div class="mb-3">
-            <label asp-for="DoktorAdi" class="p-0"></label>
-            <input asp-for="DoktorAdi" class="form-control" />
-            <span asp-validation-for="DoktorAdi" class="text-danger"></span>
-
+            <h2 class="text-success">@(Model==null?"Randevu Ekle":"Randevu Güncelle")</h2>
+            
         </div>
 
         <div class="mb-3">
-            <label asp-for="Uzmanlik" class="p-0"></label>
-            <input asp-for="Uzmanlik" class="form-control" />
-            <span asp-validation-for="Uzmanlik" class="text-danger"></span>
+            <label asp-for="HastaId" class="p-0"></label>
+            <input asp-for="HastaId" class="form-control" />
+            <span asp-validation-for="HastaId" class="text-danger"></span>
+
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="DoktorRandevuId" class="p-0"></label>
+            <select asp-for="DoktorRandevuId" asp-items="ViewBag.DoktorlarTablosuList" class="form-select">
+            </select>           
 
         </div>
 
@@ -45,10 +43,16 @@
 
         </div>
 
-        <button type="submit" class="btn btn-success" style="width: 200px">Doktor Güncelle</button>
-
-        <a asp-controller="DoktorlarTablosu" asp-action="Index" class="btn btn-success" style="width: 200px">
-            Doktorlar Tablosuna Dön
+        @if (Model != null)
+        {
+            <button type="submit" class="btn btn-success" style="width: 200px">Güncelle</button>
+        }
+        else
+        {
+            <button type="submit" class="btn btn-success" style="width: 200px">Yeni Randevu</button>
+        }
+        <a asp-controller="Randevu" asp-action="Index" class="btn btn-success" style="width: 200px">
+            Randevulara Dön
         </a>
 
     </div>

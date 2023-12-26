@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using WebProje.Models;
 using WebProje.Utility;
 
@@ -8,36 +9,76 @@ namespace WebProje.Controllers
     {
         private readonly IDoktorlarTablosuRepository _doktorlarTablosuRepository;
 
-        public DoktorlarTablosuController(IDoktorlarTablosuRepository context)
+        private readonly IKlinikTuruRepository _klinikTuruRepository;
+
+        public DoktorlarTablosuController(IDoktorlarTablosuRepository context , IKlinikTuruRepository klinikTuruRepository)
         {
             _doktorlarTablosuRepository = context;
+            _klinikTuruRepository = klinikTuruRepository;
         }
 
         public IActionResult Index()
         {
-            List<DoktorlarTablosu>NsnDoktorlarTablosuList= _doktorlarTablosuRepository.GetAll().ToList();
+            //List<DoktorlarTablosu> NsnDoktorlarTablosuList = _doktorlarTablosuRepository.GetAll().ToList();
+            List<DoktorlarTablosu> NsnDoktorlarTablosuList = _doktorlarTablosuRepository.GetAll(includeProps:"KlinikTuru").ToList();
             return View(NsnDoktorlarTablosuList);
         }
 
-        public IActionResult KlinikEkle()
+        public IActionResult KlinikEkleGuncelle(int? id)
         {
-            return View();
+            IEnumerable<SelectListItem> KlinikTuruList = _klinikTuruRepository.GetAll()
+            .Select(k => new SelectListItem
+            {
+                Text = k.Ad,
+                Value = k.KlinikTuruId.ToString()
+            });
+
+            ViewBag.KlinikTuruList = KlinikTuruList;
+            if(id==null || id==0)
+            {
+                //ekle
+                return View();
+            }
+            else
+            {
+                //guncelle
+                DoktorlarTablosu? doktorlarTablosuDb = _doktorlarTablosuRepository.Get(u => u.DoktorId == id);
+                if (doktorlarTablosuDb == null)
+                {
+                    return NotFound();
+                }
+                return View(doktorlarTablosuDb);
+
+            }
+            
         }
         [HttpPost]
-        public IActionResult KlinikEkle(DoktorlarTablosu doktorlarTablosu)
+        public IActionResult KlinikEkleGuncelle(DoktorlarTablosu doktorlarTablosu)
         {
 
             if(ModelState.IsValid) 
             {
-                _doktorlarTablosuRepository.Ekle(doktorlarTablosu);
+                if(doktorlarTablosu.DoktorId == 0)
+                {
+                    _doktorlarTablosuRepository.Ekle(doktorlarTablosu);
+                    TempData["Basarili"] = "Doktor Oluşturma İşlemi Başarılı.";
+                }
+                else
+                {
+                    _doktorlarTablosuRepository.Guncelle(doktorlarTablosu);
+                    TempData["Basarili"] = "Doktor güncelleme İşlemi Başarılı.";
+                }
+               
                 _doktorlarTablosuRepository.Kaydet();         //bilgileri veritabanına ekler
-                TempData["Basarili"] = "Doktor Oluşturma İşlemi Başarılı.";
+                
             return RedirectToAction("Index","DoktorlarTablosu");
 
             }
             return View();
         }
 
+        /*  CLEAN CODE UYGULANDI
+         * 
         public IActionResult KlinikGuncelle(int? id)
         {
             if(id == 0 || id == null)
@@ -51,7 +92,7 @@ namespace WebProje.Controllers
             }
             return View(doktorlarTablosuDb);
         }
-
+ 
         [HttpPost]
         public IActionResult KlinikGuncelle(DoktorlarTablosu doktorlarTablosu)
         {
@@ -66,6 +107,7 @@ namespace WebProje.Controllers
             }
             return View();
         }
+        */
 
             public IActionResult KlinikSil(int? id)
             {
