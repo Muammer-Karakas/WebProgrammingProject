@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\muammer karakaş\\OneDrive\\Belgeler\\GitHub\\WebProgrammingProject\\WebProje\\WebProje\\wwwroot\\img\\ozel-acibadem.jpg",
+      "PackagePath": "staticwebassets\\img\\ozel-acibadem.jpg"
+    },
+    {
       "Id": "C:\\Users\\muammer karakaş\\OneDrive\\Belgeler\\GitHub\\WebProgrammingProject\\WebProje\\WebProje\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

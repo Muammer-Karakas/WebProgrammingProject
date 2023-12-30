@@ -1,9 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using WebProje.Models;
 
 namespace WebProje.Utility
 {
-    public class HastaneRandevuDbContext : DbContext
+    public class HastaneRandevuDbContext : IdentityDbContext
     {
         public HastaneRandevuDbContext(DbContextOptions<HastaneRandevuDbContext> options) : base(options) { }
 
