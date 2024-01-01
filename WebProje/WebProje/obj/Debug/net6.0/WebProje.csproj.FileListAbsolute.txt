@@ -138,3 +138,10 @@ C:\Users\muammer karakaş\OneDrive\Belgeler\GitHub\WebProgrammingProject\WebProj
 C:\Users\muammer karakaş\OneDrive\Belgeler\GitHub\WebProgrammingProject\WebProje\WebProje\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\muammer karakaş\OneDrive\Belgeler\GitHub\WebProgrammingProject\WebProje\WebProje\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\muammer karakaş\OneDrive\Belgeler\GitHub\WebProgrammingProject\WebProje\WebProje\obj\Debug\net6.0\WebProje.sourcelink.json
+C:\Users\muammer karakaş\OneDrive\Belgeler\GitHub\WebProgrammingProject\WebProje\WebProje\bin\Debug\net6.0\en-US\WebProje.resources.dll
+C:\Users\muammer karakaş\OneDrive\Belgeler\GitHub\WebProgrammingProject\WebProje\WebProje\bin\Debug\net6.0\tr-TR\WebProje.resources.dll
+C:\Users\muammer karakaş\OneDrive\Belgeler\GitHub\WebProgrammingProject\WebProje\WebProje\obj\Debug\net6.0\WebProje.Resources.SharedResource.en-US.resources
+C:\Users\muammer karakaş\OneDrive\Belgeler\GitHub\WebProgrammingProject\WebProje\WebProje\obj\Debug\net6.0\WebProje.Resources.SharedResource.tr-TR.resources
+C:\Users\muammer karakaş\OneDrive\Belgeler\GitHub\WebProgrammingProject\WebProje\WebProje\obj\Debug\net6.0\WebProje.csproj.GenerateResource.cache
+C:\Users\muammer karakaş\OneDrive\Belgeler\GitHub\WebProgrammingProject\WebProje\WebProje\obj\Debug\net6.0\en-US\WebProje.resources.dll
+C:\Users\muammer karakaş\OneDrive\Belgeler\GitHub\WebProgrammingProject\WebProje\WebProje\obj\Debug\net6.0\tr-TR\WebProje.resources.dll

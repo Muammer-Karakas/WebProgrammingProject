@@ -22,6 +22,31 @@
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
+                        <li>
+                            <div class="dropdown">
+                                <button 
+                                    type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"> Localization
+                                </button>
+                                <ul class=" dropdown-menu">
+                                    <li>
+                                        <a asp-controller="Home"
+                                           asp-action="ChangeLanguage"
+                                           asp-route-culture="en-US"
+                                           class="dropdown-item">
+                                           <i class="flag-icon flag-icon-gb"></i> English
+                                       </a>
+                                    </li>
+                                    <li>
+                                        <a asp-controller="Home"
+                                           asp-action="ChangeLanguage"
+                                           asp-route-culture="tr-TR"
+                                           class="dropdown-item">
+                                            <i class="flag-icon flag-icon-gb"></i> Türkçe
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
                       
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="KlinikTuru" asp-action="Index">Klinikler</a>
